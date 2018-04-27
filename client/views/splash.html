@@ -1,0 +1,105 @@
+<div id="wrapper">
+<div class="container-fluid no-padding">
+	<div class="jumbotron full-width square-corners">
+			<a href="/dashboard"><h5 class="splash-dashboard-link" ng-show="loggedIn">DASHBOARD</h5></a>
+		<div class="logo">
+			<img src="./images/logos/filmstack-logo-white-large.svg" alt="" height="300" class="img-responsive center-block"><br><br>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-push-3">
+				<div id="custom-search-input">
+					<div class="input-group col-md-12">
+						<input type="text" class="form-control input-lg" placeholder="Find a movie" ng-model="query" />
+						<span class="input-group-btn">
+							<button class="btn btn-info btn-lg" type="button" ng-click="search()">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="feature-box shadow-box">
+					<img class="center icon" src="./images/icons/bookshelf.svg" alt="" height="60">
+					<h3 class="center">Your Watchlist, Organized</h3>
+					<hr>
+					<p>You've been there. You've found yourself lost in infinite lists of movies searching but not finding one you <em>really</em> want to watch. Using Filmstack, just add a movie you'd like to watch to your Watchlist, and always watch a movie you know you want to watch.</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="feature-box shadow-box">
+					<img class="center icon" src="./images/icons/lists.svg" alt="" height="60">
+					<h3 class="center">Custom Lists</h3>
+					<hr>
+					<p>Watching all of the Best Picture winners from the 90's? Want to watch all of the movies Tom Hanks has been in? Diving into Kurasawa's oeuvre? We've got you covered. Create a custom list and keep track of how many more you have to go.</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="feature-box shadow-box">
+					<a href = "https://www.themoviedb.org">
+					<img class="center icon" src="./images/logos/tmdb-black.png" alt="" height="60">
+					</a>
+					<h3 class="center">Comprehensive Movie Data</h3>
+					<hr>
+					<p>We use the Movie DB API, which allows us to provide all of the gorgeous artwork, cast and crew information, release year and more. Can't remember that guy that was in that one movie? Search for it here!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+			<div class="login-container col-xs-6 center">
+				<div class="button-box">
+					<button class="login-btn center" data-toggle="modal" data-target="#loginModal">Login</button>
+				</div>
+			</div>
+			<div class="login-container col-xs-6">
+				<div class="button-box">
+					<button class="signup-btn center" data-toggle="modal" data-target="#signupModel">Sign Up</button>
+				</div>
+			</div>
+		</div>
+
+	<!-- <div class="row" ng-repeat="result in results">
+		<div class="result-box col-md-10 col-md-push-1">
+			<h3 class="inline">{{ result.title }}</h3>
+			<h5 class="inline">{{ result.overview }}</h5>
+		</div>
+	</div> -->
+	<!-- new login modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="loginmodal-container">
+				<h1>Login to Your Account</h1><br>
+				<form>
+					<input type="text" name="user" placeholder="Username" ng-model="username">
+					<input type="password" name="pass" placeholder="Password" ng-model="password">
+					<!-- <input type="submit" name="login" class="login loginmodal-submit" value="Login" ng-click="login()"> -->
+					<!-- <button data-dismiss="modal" class="btn btn-default" ng-click="login()">Login</button> -->
+					<div class="orange-button" data-dismiss="modal" ng-click="login()"><h5>LOGIN</h5></div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- sign up modal -->
+	<div class="modal fade" id="signupModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="signupmodal-container">
+				<h1>Create an Account</h1><br>
+				<form>
+					<input type="text" ng-model="username" placeholder="Username">
+					<input type="email" ng-model="email" placeholder="Email">
+					<input type="password" ng-model="password" placeholder="Password">
+					<!-- <button data-dismiss="modal" class="btn btn-primary" ng-click="createUser()">SignUp</button> -->
+					<div class="orange-button" data-dismiss="modal" ng-click="createUser()"><h5>SIGN UP</h5></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<fsfooter></fsfooter>
+</div>

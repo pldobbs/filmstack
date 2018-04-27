@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="filmstack">
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+	<title>Filmstack</title>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<!-- angularJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-resource.js"></script>
+	<script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+	<!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="styles.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div ng-view></div>
+	<!-- views populate here -->
+	
+	<!-- modules -->
+	<script type="text/javascript" src="./app.js"></script>
+	<!-- controllers -->
+	<script type="text/javascript" src="./controllers/SearchController.js"></script>
+    <script type="text/javascript" src="./controllers/SplashController.js"></script>
+    <script type="text/javascript" src="./controllers/DetailController.js"></script>
+    <script type="text/javascript" src="./controllers/DashboardController.js"></script>
+    <!-- <script type="text/javascript" src="./controllers/LoginController.js"></script> -->
+    <script type="text/javascript" src="./controllers/UserController.js"></script>
+    <script type="text/javascript" src="./controllers/CreateUserController.js"></script>
+	<!-- factories -->
+	<script type="text/javascript" src="./factories/DetailFactory.js"></script>
+    <script type="text/javascript" src="./factories/SearchFactory.js"></script>
+    <script type="text/javascript" src="./factories/CastCrewFactory.js"></script>
+    <script type="text/javascript" src="./factories/ListFactory.js"></script>
+    <script type="text/javascript" src="./factories/DeleteMovieFactory.js"></script>
+    <!-- <script type="text/javascript" src="./factories/LogInFactory.js"></script> -->
+    <script type="text/javascript" src="./factories/DashboardFactory.js"></script>
+    <script type="text/javascript" src="./factories/UserFactory.js"></script>
+    <!-- services -->
+    <script type="text/javascript" src="./services/SearchCacheService.js"></script>
+    <script type="text/javascript" src="./services/UserService.js"></script>
+    <!-- directives -->
+    <script type="text/javascript" src="./directives/navbarDirective.js"></script>
+    <script type="text/javascript" src="./directives/directives.js"></script>
+</body>
+</html>

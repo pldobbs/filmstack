@@ -1,0 +1,148 @@
+<navbar></navbar>
+<div class="alert alert-success alert-dismissible" role="alert" ng-show="showAlert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<strong>{{ movie.title }}</strong> has been added to your watchlist! Check it out in your <a href="/dashboard">Dashboard</a>.
+</div>
+<div class="detail-page">
+	<div class="container full-width square-corners">
+		<div class="row movie-banner">
+			<div class="background-image hidden-xs">
+				<img class="backdrop" ng-src="https://image.tmdb.org/t/p/original{{ movie.backdrop_path }}" style="max-width: 100%">
+			</div>
+			<div class="row movie-banner-pad"></div>
+			<!-- responsive section for small screens -->
+			<div class="compact-movie-info hidden-md hidden-lg hidden-xl">
+				<div class="left">
+					<img ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="" height="450">
+				</div>
+				<div class="right">
+					<h2>{{ movie.title }}</h2>
+					<p class="release-year">{{ movie.release_date | date : "longDate" }}</p>
+					<h3>Overview</h3>
+					<p class="movie-overview">{{ movie.overview }}</p>
+					<h3>Director</h3>
+					<h5 ng-repeat="person in castCrew.crew | filter: { job : 'Director' } : true ">{{ person.name }}</h5>
+					<div class="btn-group" ng-show="loggedIn">
+		  					<button type="button" class="btn btn-primary" id="watchlist-dropdown" ng-click="addToList(movie.id, movie.title, movie.poster_path, lists[0].id, user.id)">Add to Watchlist</button>
+		  					<button type="button" class="btn btn-primary dropdown-toggle" id="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		   						<span class="caret"></span>
+		    					<span class="sr-only">Toggle Dropdown</span>
+		  					</button>
+		  					<ul class="dropdown-menu">
+		  						  <li ng-repeat="userList in userLists" ng-click="addToList(movie.id, movie.title, movie.poster_path, userList.id, user.id)"><a href="">{{ userList.name }}</a></li>
+		  					</ul>
+						</div>
+				</div>
+			</div>
+			<!-- responsive section for large screens -->
+			<div class="col-md-4 movie-poster hidden-sm hidden-xs" align="center">
+				<img class="rounded-borders" ng-src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="" height="450">
+			</div>
+			<div class="col-md-8 hidden-sm hidden-xs">
+				<div class="row">
+					<div>
+						<div class="col-lg-12">
+							<h1 class="movie-title">{{ movie.title }}</h1><br>
+							<p class="release-year">{{ movie.release_date | date : "longDate" }}</p>
+							<h3>Overview</h3>
+							<p class="movie-overview">{{ movie.overview }}</p>
+							<h3></h3>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<h3>Featured Credits</h3>
+					</div>
+					<div class="col-xs-4">
+						<h4>Director</h4>
+						<h5 ng-repeat="person in castCrew.crew | filter: { job : 'Director' } : true ">{{ person.name }}</h5>
+					</div>
+					<div class="col-xs-4">
+						<h4>Writer</h4>
+						<h5 ng-repeat="person in castCrew.crew | filter: {job : 'Screenplay'}">{{ person.name }}</h5>
+					</div>
+					<div class="col-xs-4">
+						<h4>Producers</h4>
+						<h5 ng-repeat="person in castCrew.crew | filter: { job : 'Executive Producer' } : true ">{{ person.name }}</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3">
+						<div class="btn-group" ng-show="loggedIn">
+		  					<button type="button" class="btn btn-primary" id="watchlist-dropdown" ng-click="addToList(movie.id, movie.title, movie.poster_path, lists[0].id, user.id)">Add to Watchlist</button>
+		  					<button type="button" class="btn btn-primary dropdown-toggle" id="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		   						<span class="caret"></span>
+		    					<span class="sr-only">Toggle Dropdown</span>
+		  					</button>
+		  					<ul class="dropdown-menu">
+		  						  <li ng-repeat="userList in userLists" ng-click="addToList(movie.id, movie.title, movie.poster_path, userList.id, user.id)"><a href="">{{ userList.name }}</a></li>
+		  					</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+		<div class="row">
+			<div class="col-xs-12 more-info"><h3 align="center">MORE INFO</h3></div>
+		</div>
+		<div class="row page-bottom">
+			<div class="col-sm-9">
+				<h4 class="orange-text" align="center">FEATURED CAST</h4>
+				<div class="cast-container">
+					<div class="personCard shadow-box" ng-repeat="person in castCrew.cast | limitTo: 10">
+						<div class="photo-box" ng-style="{'background-image':'url(https://image.tmdb.org/t/p/w185{{ person.profile_path }})'}"></div>
+						<h4>{{ person.name }}</h4>
+						<p>{{ person.character }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="info col-sm-3">
+				<h4 class="orange-text">Stats</h4>
+				<h4>Runtime</h4>
+				<p>{{ movie.runtime }} min</p>
+				<h4>Budget</h4>
+				<p>{{ movie.budget | currency }}</p>
+				<h4>Revenue</h4>
+				<p>{{ movie.revenue | currency }}</p>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	
+
+	<div class="modal fade" id="signupModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="signupmodal-container">
+				<h1>Please log in to add this to your list.</h1><br>
+				<form>
+					<input type="text" ng-model="username" placeholder="Username">
+					<input type="email" ng-model="email" placeholder="Email">
+					<input type="password" ng-model="password" placeholder="Password">
+					<!-- <button data-dismiss="modal" class="btn btn-primary" ng-click="createUser()">SignUp</button> -->
+					<div class="orange-button" data-dismiss="modal" ng-click="createUser()"><h5>SIGN UP</h5></div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+<fsfooter></fsfooter>

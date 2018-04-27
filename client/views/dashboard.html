@@ -1,0 +1,60 @@
+<navbar></navbar>
+<div id="wrapper">
+	<div class="dashboard-header">
+			<h1>{{ user.username }}</h1>
+		</div>
+	<div class="container-fluid">
+		
+		<div class="row content">
+			<div class="col-sm-2 sidenav">
+				<h4 class="orange-text list-pad">LISTS</h4>
+				<!-- <h4>My Lists</h4> -->
+			<!-- 	<ul class="nav nav-pills nav-stacked">
+					<li class="active"><a href="">Watchlist</a></li>
+				</ul> -->
+				<!-- <button ng-click="changeView(3)">test</button> -->
+				<hr>
+				<ul class="nav nav-pills nav-stacked">
+					<!-- <li ng-repeat="otherList in otherLists" ng-click="changeView(otherList.id)">{{ otherList.name }}</li> -->
+				</ul><br>
+				<div class="orange-button movie-nav" ng-repeat="otherList in otherLists" ng-click="changeView(otherList.id)"><h5>{{ otherList.name }}</h5></div>
+				<!-- <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal">CREATE NEW LIST</h4></button> -->
+				<div class="orange-button-solid" data-toggle="modal" data-target="#loginModal"><h5>Create New List</h5></div>
+			</div>
+
+			<div class="col-sm-10">
+				<h4 class="orange-text">WATCHLIST</h4>
+				<hr>
+				<div id="loader" ng-hide="windowLoaded">
+					<img src="./assets/film-reel.gif" alt="" height="100">
+				</div>
+				<div class="row center-div">
+					<div class="posterdiv" ng-repeat="movie in mainList" ng-style="{'background-image':'url(https://image.tmdb.org/t/p/w500{{ movie.poster }})'}">
+						<div class="poster-overlay"></div>
+						<a href="/detail/{{ movie.movieID }}">	
+							<div class="view-movie center"><h4>MOVIE DETAILS</h4></div>
+						</a>
+						<div ng-click="deleteMovie(movie.movieID)" class="remove-movie center"><h4>REMOVE</h4></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- modals -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="loginmodal-container">
+				<h1>Create a New List</h1><br>
+				<form>
+					<label for="newlistname" id="newlistname-label">List Name:</label>
+					<input type="text" name="user" placeholder="My Awesome List" maxlength="50" ng-model="newlistname">
+					<!-- <button data-dismiss="modal" class="btn btn-primary" ng-click="createList(newlistname)">Create List</button> -->
+					<div class="orange-button" data-dismiss="modal" ng-click="createList(newlistname)"><h4>CREATE LIST</h4></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<fsfooter></fsfooter>
+</div>

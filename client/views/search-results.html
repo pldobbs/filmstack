@@ -1,0 +1,75 @@
+<navbar></navbar>
+<div id="wrapper">
+<div class="container search-results">
+	<div class="row">
+		<div class="bottom-margin-md col-xs-12">
+			<h1 class="text-center">Search Results</h1>
+		</div>
+	</div>
+	<div class="row no-margin no-padding" ng-repeat="result in results">
+		<div class="result-box shadow-box col-md-10 col-md-push-1 hidden-md hidden-sm hidden-xs">
+			<div class="col-lg-3 no-padding">
+				<img class="inline img-responsive" ng-src="https://image.tmdb.org/t/p/w500{{ result.poster_path }}" src="" height="350">
+			</div>
+			<div class="col-lg-9">
+				<div class="row">
+					<h3 class="inline">{{ result.title }}</h3><br>
+					<h4 class="release-year">{{ result.release_date | date : "yyyy" }}</h4>
+					<p class="inline">{{ result.overview }}</p>
+				</div>
+				<div class="row read-more">
+					<hr>
+					<button class="result-btn center" ng-click="goToMovie(result.id)">Read More</button>
+				</div>
+			</div>
+		</div>
+	
+
+	
+	
+
+
+
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4" ng-repeat="result in results">
+			<!-- small view -->
+			<a ng-href="/detail/{{ result.id }}">
+			<div class="search-res-sm hidden-lg hidden-xl" >
+				<div class="sm-res-photo" ng-style="{'background-image':'url(https://image.tmdb.org/t/p/w500{{ result.poster_path }})'}">
+				</div>
+				<div class="sm-res-info">
+					<h3>{{ result.title }}</h3>
+					<h4>{{ result.release_date | date : "yyyy" }}</h4>
+				</div>
+			</div>
+			</a>
+	<!-- end small view -->
+		</div>
+	</div>
+		
+
+	<!-- <a ng-href="/detail/{{ result.id }}"><img ng-src="https://image.tmdb.org/t/p/w500{{ result.poster_path }}" alt="" width="175"></a>
+
+
+
+	<div class="col-sm-9">
+		<h4 class="orange-text" align="center">FEATURED CAST</h4>
+		<div class="cast-container">
+			<div class="personCard shadow-box" ng-repeat="person in castCrew.cast | limitTo: 10">
+				<div class="photo-box" ng-style="{'background-image':'url(https://image.tmdb.org/t/p/w185{{ person.profile_path }})'}"></div>
+				<h4>{{ person.name }}</h4>
+				<p>{{ person.character }}</p>
+			</div>
+		</div>
+	</div>
+
+
+ -->
+
+
+
+</div>
+<fsfooter></fsfooter>
+</div>

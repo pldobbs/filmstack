@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1067px" height="304px" viewBox="0 0 1067 304" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>filmstack@1.5x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-0.3%" y="-0.8%" width="100.7%" height="102.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M260.625301,24.963925 C260.615681,24.963925 39.4420394,24.954305 39.4420394,24.954305 C31.4093314,24.983165 24.9350649,31.2554113 24.9350649,38.999519 L24.9350649,63.973064 L24.9350649,221.192031 L24.9350649,260.509861 C24.9350649,268.523329 31.4381914,275.007215 39.4420394,275.007215 L140.904612,275.007215 L260.577201,275.007215 C268.590669,275.007215 275.084175,268.523329 275.084175,260.509861 L275.084175,63.973064 L275.084175,38.999519 C275.084175,31.2554113 268.609909,24.983165 260.625301,24.963925 Z" id="path-2"></path>
+        <filter x="-1.4%" y="-1.0%" width="102.8%" height="102.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M198.124098,140.37518 L198.124098,44.1750842 L101.924002,44.1750842 L101.924002,140.37518 L198.124098,140.37518 Z M198.124098,255.815296 L198.124098,159.6152 L101.924002,159.6152 L101.924002,255.815296 L198.124098,255.815296 Z M44.2039442,63.4151034 L82.6839827,63.4151034 L82.6839827,44.1750842 L44.2039442,44.1750842 L44.2039442,63.4151034 L44.2039442,63.4151034 Z M44.2039442,101.895142 L82.6839827,101.895142 L82.6839827,82.6551227 L44.2039442,82.6551227 L44.2039442,101.895142 L44.2039442,101.895142 Z M44.2039442,140.37518 L82.6839827,140.37518 L82.6839827,121.144781 L44.2039442,121.144781 L44.2039442,140.37518 L44.2039442,140.37518 Z M44.2039442,178.855219 L82.6839827,178.855219 L82.6839827,159.6152 L44.2039442,159.6152 L44.2039442,178.855219 L44.2039442,178.855219 Z M44.2039442,217.335257 L82.6839827,217.335257 L82.6839827,198.095238 L44.2039442,198.095238 L44.2039442,217.335257 L44.2039442,217.335257 Z M44.2039442,255.815296 L82.6839827,255.815296 L82.6839827,236.575277 L44.2039442,236.575277 L44.2039442,255.815296 L44.2039442,255.815296 Z M217.364117,44.1750842 L217.364117,63.4151034 L255.844156,63.4151034 L255.844156,44.1750842 L217.364117,44.1750842 Z M217.364117,101.895142 L255.844156,101.895142 L255.844156,82.6551227 L217.364117,82.6551227 L217.364117,101.895142 Z M217.364117,140.37518 L255.844156,140.37518 L255.844156,121.144781 L217.364117,121.144781 L217.364117,140.37518 Z M217.364117,178.855219 L255.844156,178.855219 L255.844156,159.6152 L217.364117,159.6152 L217.364117,178.855219 Z M217.364117,217.335257 L255.844156,217.335257 L255.844156,198.095238 L217.364117,198.095238 L217.364117,217.335257 Z M217.364117,255.815296 L255.844156,255.815296 L255.844156,236.575277 L217.364117,236.575277 L217.364117,255.815296 Z" id="path-4"></path>
+        <filter x="-0.7%" y="-0.7%" width="101.4%" height="101.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="filmstack" filter="url(#filter-1)" transform="translate(2.000000, 1.000000)">
+            <g id="mark">
+                <path d="M299.422799,224.377104 L248.552189,34.5358345 L242.087542,10.4088504 C240.08658,2.94372294 232.217412,-1.44300144 224.492544,0.586820587 C224.482924,0.596440596 10.8417508,57.8354978 10.8417508,57.8354978 C3.08802309,59.9519 -1.52958153,67.6767677 0.471380471,75.1611352 L6.93602694,99.2784993 L57.8066378,289.119769 C59.8749399,296.854257 67.8306878,301.443001 75.5651756,299.365079 L289.177489,242.135642 C296.902357,240.05772 301.500722,232.111592 299.422799,224.377104 Z" id="stack" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <g id="film-bg" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <g id="film">
+                    <use fill="#FE9E36" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                </g>
+            </g>
+            <text fill="#FFFFFF" font-family="AvenirNext-Bold, Avenir Next" font-size="170" font-weight="bold">
+                <tspan x="315" y="192">filmstack</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
